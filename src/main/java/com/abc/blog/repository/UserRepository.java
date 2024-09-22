@@ -7,7 +7,7 @@ import com.abc.blog.model.User;
 public interface UserRepository extends JpaRepository<User, Integer>{
 	// select * from user where username = XXX and password = XXX;
 	// 첫번째 XXX에는 username, 두번째 XXX에는 password가 들어감 -> JPA Naming query
-	User findByUsernameAndPassword(String username, String password);
+//	User findByUsernameAndPassword(String username, String password);
 	
 	// @Query(value = "select * from user where username = XXX and password = XXX", nativeQuery = True)
 	// User login(String username, String password);
