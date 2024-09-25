@@ -1,10 +1,13 @@
 package com.abc.blog.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.abc.blog.model.User;
 
-public interface UserRepository extends JpaRepository<User, Integer>{
+public interface UserRepository extends JpaRepository<User, Integer> {
+	Optional<User> findByUsername(String username);
 	// select * from user where username = XXX and password = XXX;
 	// 첫번째 XXX에는 username, 두번째 XXX에는 password가 들어감 -> JPA Naming query
 //	User findByUsernameAndPassword(String username, String password);
