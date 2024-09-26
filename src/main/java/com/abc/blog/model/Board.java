@@ -37,7 +37,6 @@ public class Board {
 	@Lob // 대용량 데이터
 	private String content;
 	
-	@ColumnDefault("0")
 	private int count;
 	
 	@ManyToOne // Many = Board, One = user -> 한명의 유저가 여러 게시글 작성 가능
